@@ -179,29 +179,71 @@ A média da turma.
 
 
 """
-alunos = int(input("Quantos alunos serão cadastrados?"))
-nome = []
-nota = []
-notaadicao = 0
-conceito_a = []
-conceito_b = []
-conceito_c = []
-conceito_d = []
+# alunos = int(input("Quantos alunos serão cadastrados?"))
+# nome = []
+# nota = []
+# notaadicao = 0
+# conceito_a = []
+# conceito_b = []
+# conceito_c = []
+# conceito_d = []
 
-for i in range(alunos):
-    nome = input("Qual o seu nome?")
-    nota = float(input("Qual a sua nota?"))
-    notaadicao += nota
-    if nota >= 9:
-        conceito_a.append(nota)
-    elif nota >= 7 and nota < 9:
-        conceito_b.append(nota)
-    elif nota >= 5 and nota < 7:
-        conceito_c.append(nota)
+# for i in range(alunos):
+#     nome = input("Qual o seu nome?")
+#     nota = float(input("Qual a sua nota?"))
+#     notaadicao += nota
+#     if nota >= 9:
+#         conceito_a.append(nota)
+#     elif nota >= 7 and nota < 9:
+#         conceito_b.append(nota)
+#     elif nota >= 5 and nota < 7:
+#         conceito_c.append(nota)
+#     else:
+#         conceito_d.append(nota)
+
+# media = notaadicao / alunos
+
+# print(f"Conceito A - {conceito_a}, Conceito B - {conceito_b}, Conceito C - {conceito_c}, Conceito D - {conceito_d}, a Média é {media}")
+
+# Atividade 10
+
+# usuarios = int(input("Quantos alunos você quer cadastrar?"))
+# alunos = []
+
+
+# for i in range (usuarios):
+#     nome = input("Nome do aluno: ")
+#     nota = float(input("Nota do aluno: "))
+#     alunos.append((nome, nota))
+
+# print (alunos)
+# alunos_ordenados = (sorted(alunos, key=lambda aluno: aluno[1], reverse=True))
+# print (alunos_ordenados)
+# print (f"Maior nota: {alunos_ordenados[0]}, Menor nota: {alunos_ordenados[-1]}")
+
+# Atividade 11
+
+usuarios = int(input("Quantos alunos você quer cadastrar? "))
+alunos = []
+notas = 0
+alunos_acima = []
+alunos_abaixo = []
+
+for i in range (usuarios):
+    nome = input("Nome do aluno: ")
+    nota = float(input("Nota do aluno: "))
+    notas += nota
+    alunos.append((nome, nota))
+    
+media = notas / usuarios
+
+for i in range (len(alunos)):
+    if alunos[i][1] >= 7:
+        alunos_acima.append(f"{alunos[i][0]}, {alunos[i][1]}")
     else:
-        conceito_d.append(nota)
-
-media = notaadicao / alunos
-
-print(f"Conceito A - {conceito_a}, Conceito B - {conceito_b}, Conceito C - {conceito_c}, Conceito D - {conceito_d}, a Média é {media}")
+        alunos_abaixo.append(f"{alunos[i][0]}, {alunos[i][1]}")
+        
+print (media)
+print (f"Alunos acima: {alunos_acima}")
+print (f"Alunos abaixo: {alunos_abaixo}")
 
