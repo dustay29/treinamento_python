@@ -223,11 +223,80 @@ A média da turma.
 
 # Atividade 11
 
+# usuarios = int(input("Quantos alunos você quer cadastrar? "))
+# alunos = []
+# notas = 0
+# alunos_acima = []
+# alunos_abaixo = []
+
+# for i in range (usuarios):
+#     nome = input("Nome do aluno: ")
+#     nota = float(input("Nota do aluno: "))
+#     notas += nota
+#     alunos.append((nome, nota))
+    
+# media = notas / usuarios
+
+# for i in range (len(alunos)):
+#     if alunos[i][1] >= 7:
+#         alunos_acima.append(f"{alunos[i][0]}, {alunos[i][1]}")
+#     else:
+#         alunos_abaixo.append(f"{alunos[i][0]}, {alunos[i][1]}")
+        
+# print (media)
+# print (f"Alunos acima: {alunos_acima}")
+# print (f"Alunos abaixo: {alunos_abaixo}")
+
+#Atividade 12
+
+# usuarios = int(input("Quantos alunos você quer cadastrar? "))
+# alunos = []
+# notas = 0
+# alunos_acima = []
+# alunos_abaixo = []
+
+# for i in range (usuarios):
+#     nome = input("Nome do aluno: ")
+#     nota = float(input("Nota do aluno: "))
+#     notas += nota
+#     alunos.append((nome, nota))
+    
+# media = notas / usuarios
+
+# for i in range (len(alunos)):
+#     if alunos[i][1] >= 7:
+#         alunos_acima.append(f"{alunos[i][0]}, {alunos[i][1]}")
+#     else:
+#         alunos_abaixo.append(f"{alunos[i][0]}, {alunos[i][1]}")
+        
+# print ("Média", media)
+
+# print (f"Alunos acima: {alunos_acima}")
+# print (f"Alunos abaixo: {alunos_abaixo}")
+
+# alunos_ordenados = (sorted(alunos, key=lambda aluno: aluno[1], reverse=True))
+# print ("Alunos em ordem decrescente", alunos_ordenados)
+
+# print (f"Maior nota: {alunos_ordenados[0]}")
+# print (f"Menor nota: {alunos_ordenados[-1]}")
+
+# percentual_aprovados = (len(alunos_acima) / len(alunos)) * 100
+# print ('Percentual aprovados: ', percentual_aprovados)
+
+# percentual_reprovados = (len(alunos_abaixo) / len(alunos)) * 100
+# print ('Percentual reprovados: ', percentual_reprovados)
+
+#Atividade 14
+
 usuarios = int(input("Quantos alunos você quer cadastrar? "))
 alunos = []
 notas = 0
 alunos_acima = []
 alunos_abaixo = []
+conceito_a = []
+conceito_b = []
+conceito_c = []
+conceito_d = []
 
 for i in range (usuarios):
     nome = input("Nome do aluno: ")
@@ -243,7 +312,40 @@ for i in range (len(alunos)):
     else:
         alunos_abaixo.append(f"{alunos[i][0]}, {alunos[i][1]}")
         
-print (media)
+
+for i in range(usuarios):
+    if alunos[i][1] >= 9:
+        conceito_a.append(f"{alunos[i][0]}, {alunos[i][1]}")
+    elif alunos[i][1] >= 7 and alunos[i][1] < 9:
+        conceito_b.append(f"{alunos[i][0]}, {alunos[i][1]}")
+    elif alunos[i][1] >= 5 and alunos[i][1] < 7:
+        conceito_c.append(f"{alunos[i][0]}, {alunos[i][1]}")
+    else:
+        conceito_d.append(f"{alunos[i][0]}, {alunos[i][1]}")
+
+print ("Média", media)
+
 print (f"Alunos acima: {alunos_acima}")
 print (f"Alunos abaixo: {alunos_abaixo}")
 
+alunos_ordenados = (sorted(alunos, key=lambda aluno: aluno[1], reverse=True))
+print ("Alunos em ordem decrescente", alunos_ordenados)
+
+print (f"Maior nota: {alunos_ordenados[0]}")
+print (f"Menor nota: {alunos_ordenados[-1]}")
+
+percentual_aprovados = (len(alunos_acima) / len(alunos)) * 100
+print ('Percentual aprovados: ', percentual_aprovados)
+
+percentual_reprovados = (len(alunos_abaixo) / len(alunos)) * 100
+print ('Percentual reprovados: ', percentual_reprovados)
+
+print (f'Conceito A = {conceito_a}')
+print (f'Conceito B = {conceito_b}')
+print (f'Conceito C = {conceito_c}')
+print (f'Conceito D = {conceito_d}')
+
+print (f"Quantidade - Conceito A = {len(conceito_a)}")
+print (f"Quantidade - Conceito B = {len(conceito_b)}")
+print (f"Quantidade - Conceito C = {len(conceito_c)}")
+print (f"Quantidade - Conceito D = {len(conceito_d)}")
