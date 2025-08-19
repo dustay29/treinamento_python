@@ -288,64 +288,124 @@ A média da turma.
 
 #Atividade 14
 
-usuarios = int(input("Quantos alunos você quer cadastrar? "))
-alunos = []
-notas = 0
-alunos_acima = []
-alunos_abaixo = []
-conceito_a = []
-conceito_b = []
-conceito_c = []
-conceito_d = []
+# usuarios = int(input("Quantos alunos você quer cadastrar? "))
+# alunos = []
+# notas = 0
+# alunos_acima = []
+# alunos_abaixo = []
+# conceito_a = []
+# conceito_b = []
+# conceito_c = []
+# conceito_d = []
 
-for i in range (usuarios):
-    nome = input("Nome do aluno: ")
-    nota = float(input("Nota do aluno: "))
-    notas += nota
-    alunos.append((nome, nota))
+# for i in range (usuarios):
+#     nome = input("Nome do aluno: ")
+#     nota = float(input("Nota do aluno: "))
+#     notas += nota
+#     alunos.append((nome, nota))
     
-media = notas / usuarios
+# media = notas / usuarios
 
-for i in range (len(alunos)):
-    if alunos[i][1] >= 7:
-        alunos_acima.append(f"{alunos[i][0]}, {alunos[i][1]}")
-    else:
-        alunos_abaixo.append(f"{alunos[i][0]}, {alunos[i][1]}")
+# for i in range (len(alunos)):
+#     if alunos[i][1] >= 7:
+#         alunos_acima.append(f"{alunos[i][0]}, {alunos[i][1]}")
+#     else:
+#         alunos_abaixo.append(f"{alunos[i][0]}, {alunos[i][1]}")
         
 
-for i in range(usuarios):
-    if alunos[i][1] >= 9:
-        conceito_a.append(f"{alunos[i][0]}, {alunos[i][1]}")
-    elif alunos[i][1] >= 7 and alunos[i][1] < 9:
-        conceito_b.append(f"{alunos[i][0]}, {alunos[i][1]}")
-    elif alunos[i][1] >= 5 and alunos[i][1] < 7:
-        conceito_c.append(f"{alunos[i][0]}, {alunos[i][1]}")
-    else:
-        conceito_d.append(f"{alunos[i][0]}, {alunos[i][1]}")
+# for i in range(usuarios):
+#     if alunos[i][1] >= 9:
+#         conceito_a.append(f"{alunos[i][0]}, {alunos[i][1]}")
+#     elif alunos[i][1] >= 7 and alunos[i][1] < 9:
+#         conceito_b.append(f"{alunos[i][0]}, {alunos[i][1]}")
+#     elif alunos[i][1] >= 5 and alunos[i][1] < 7:
+#         conceito_c.append(f"{alunos[i][0]}, {alunos[i][1]}")
+#     else:
+#         conceito_d.append(f"{alunos[i][0]}, {alunos[i][1]}")
 
-print ("Média", media)
+# print ("Média", media)
 
-print (f"Alunos acima: {alunos_acima}")
-print (f"Alunos abaixo: {alunos_abaixo}")
+# print (f"Alunos acima: {alunos_acima}")
+# print (f"Alunos abaixo: {alunos_abaixo}")
 
-alunos_ordenados = (sorted(alunos, key=lambda aluno: aluno[1], reverse=True))
-print ("Alunos em ordem decrescente", alunos_ordenados)
+# alunos_ordenados = (sorted(alunos, key=lambda aluno: aluno[1], reverse=True))
+# print ("Alunos em ordem decrescente", alunos_ordenados)
 
-print (f"Maior nota: {alunos_ordenados[0]}")
-print (f"Menor nota: {alunos_ordenados[-1]}")
+# print (f"Maior nota: {alunos_ordenados[0]}")
+# print (f"Menor nota: {alunos_ordenados[-1]}")
 
-percentual_aprovados = (len(alunos_acima) / len(alunos)) * 100
-print ('Percentual aprovados: ', percentual_aprovados)
+# percentual_aprovados = (len(alunos_acima) / len(alunos)) * 100
+# print ('Percentual aprovados: ', percentual_aprovados)
 
-percentual_reprovados = (len(alunos_abaixo) / len(alunos)) * 100
-print ('Percentual reprovados: ', percentual_reprovados)
+# percentual_reprovados = (len(alunos_abaixo) / len(alunos)) * 100
+# print ('Percentual reprovados: ', percentual_reprovados)
 
-print (f'Conceito A = {conceito_a}')
-print (f'Conceito B = {conceito_b}')
-print (f'Conceito C = {conceito_c}')
-print (f'Conceito D = {conceito_d}')
+# print (f'Conceito A = {conceito_a}')
+# print (f'Conceito B = {conceito_b}')
+# print (f'Conceito C = {conceito_c}')
+# print (f'Conceito D = {conceito_d}')
 
-print (f"Quantidade - Conceito A = {len(conceito_a)}")
-print (f"Quantidade - Conceito B = {len(conceito_b)}")
-print (f"Quantidade - Conceito C = {len(conceito_c)}")
-print (f"Quantidade - Conceito D = {len(conceito_d)}")
+# print (f"Quantidade - Conceito A = {len(conceito_a)}")
+# print (f"Quantidade - Conceito B = {len(conceito_b)}")
+# print (f"Quantidade - Conceito C = {len(conceito_c)}")
+# print (f"Quantidade - Conceito D = {len(conceito_d)}")
+
+#Atividade 15
+
+# import statistics as st
+
+# usuarios = int(input("Quantos alunos você quer cadastrar? "))
+# alunos = []
+
+# for i in range(usuarios):
+#     nome = input("Qual o seu nome? ")
+#     nota = float(input("Qual a sua nota? "))
+#     alunos.append((nome, nota))
+
+# # notas = [alunos[i][1] for i in range(alunos)]
+# notas = [nota for _, nota in alunos] #- Já vai para outra tupla
+
+# media = st.mean(notas)
+# mediana = st.median(notas)
+# moda = st.mode(notas)
+# ddp = st.pstdev(notas) # Desvio de Padrão
+
+# alunos_ordenados = (sorted(alunos, key=lambda aluno: aluno[1], reverse=True))
+# alunos_ordenados2 = (sorted(alunos, key=lambda aluno: aluno[1], reverse=False))
+
+# def proxima_media(aluno):
+#     return abs(aluno[1] - 7)
+
+# mais_proximo = min(alunos, key=proxima_media)
+# print("Aluno mais próximo da média:", mais_proximo)
+
+# print ("Alunos em ordem decrescente", alunos_ordenados)
+# print ("Alunos em ordem decrescente", alunos_ordenados2)
+
+# print(f"Média, {media}")
+# print(f"Mediana, {mediana}")
+# print(f"Moda, {moda}")
+# print(f"Desvio de Padrão, {ddp}")
+
+# Aprendendo Funções
+
+# def saudacao(nome):
+#     return f"Olá, {nome}"
+
+# print (saudacao("Sophia"))
+
+# for i in range(5): Jeito que eu fiz
+#     x = int(input("Número? "))
+#     def quadrado(numero):
+#         return f"Resultado:, {numero * numero}"
+#     print (quadrado(x)) 
+
+# def quadrado(numero): # Jeito to chat
+#     return numero * numero
+
+# for i in range(5):
+#     x = int(input("Número? "))
+#     print(quadrado(x))
+
+
+
