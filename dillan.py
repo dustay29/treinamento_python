@@ -400,12 +400,122 @@ A média da turma.
 #         return f"Resultado:, {numero * numero}"
 #     print (quadrado(x)) 
 
-# def quadrado(numero): # Jeito to chat
+# def quadrado(numero): # Jeito do chat
 #     return numero * numero
 
 # for i in range(5):
 #     x = int(input("Número? "))
 #     print(quadrado(x))
+
+    # 1. Definir a função
+# def maior_numero(a, b):
+#     if a > b:
+#         return a   # se 'a' for maior, retorna 'a'
+#     else:
+#         return b   # senão, retorna 'b'
+
+# # 2. Programa principal
+# for i in range(5):   # repetir 5 vezes
+#     n1 = int(input("Digite o 1º número: "))
+#     n2 = int(input("Digite o 2º número: "))
+
+#     # 3. Usar a função
+#     resultado = maior_numero(n1, n2)
+
+#     # 4. Mostrar o retorno
+#     print("O maior número é:", resultado)
+
+"""
+
+Crie uma função chamada contar_vogais(texto) que receba uma string e retorne quantas vogais (a, e, i, o, u) existem nela.
+
+No programa principal:
+
+Peça uma palavra ou frase para o usuário (umas 3 vezes).
+
+Use a função para contar as vogais.
+
+Mostre o resultado no terminal.
+
+"""
+
+# txt = input("Fale uma palavra: ")
+
+# def contar_vogais(texto):
+#     contador = 0  
+
+#     for letra in texto:
+#         if letra in "aeiou":
+#             contador += 1
+#     return contador  
+
+# resultado = contar_vogais(txt)
+
+# print("Quantidade de vogais:", resultado)
+
+"""
+Crie uma função chamada contar_vogais_e_consoantes(texto) que receba uma string.
+
+A função deve retornar dois valores:
+
+Quantidade de vogais
+
+Quantidade de consoantes
+
+No programa principal:
+
+Peça ao usuário para digitar uma palavra ou frase.
+
+Use a função para contar vogais e consoantes.
+
+Mostre os resultados separados no terminal.
+"""
+
+# txt = input("Fale uma palavra: ")
+
+# def contar_consoantes(texto):
+#     contador = 0  
+
+#     for letra in texto.lower():
+#         if letra in "bcdfghjklmnpqrstvwxyz":
+#             contador +=1
+#         else:
+#             pass
+#     return contador  
+
+# def contar_vogais(texto):
+#     contador = 0  
+
+#     for letra in texto.lower():
+#         if letra in "aeiou":
+#             contador +=1
+#         else:
+#             pass
+#     return contador  
+
+# resultado_consoantes = contar_consoantes(txt)
+# resultado_vogais = contar_vogais(txt)
+
+
+# print("Quantidade de consoantes:", resultado_consoantes)
+# print("Quantidade de Vogais:", resultado_vogais)
+
+"""Crie uma função chamada inverter_palavra(texto) que recebe uma string.
+
+A função deve retornar a palavra invertida.
+
+No programa principal:
+
+Peça ao usuário para digitar uma palavra ou frase.
+
+Use a função para inverter o texto.
+
+Mostre o resultado no terminal."""
+
+
+
+
+
 
 
 
