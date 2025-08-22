@@ -500,7 +500,9 @@ Mostre os resultados separados no terminal.
 # print("Quantidade de consoantes:", resultado_consoantes)
 # print("Quantidade de Vogais:", resultado_vogais)
 
-"""Crie uma função chamada inverter_palavra(texto) que recebe uma string.
+"""📝 Exercício: Inverter uma Palavra
+
+Crie uma função chamada inverter_palavra(texto) que recebe uma string.
 
 A função deve retornar a palavra invertida.
 
@@ -510,7 +512,46 @@ Peça ao usuário para digitar uma palavra ou frase.
 
 Use a função para inverter o texto.
 
-Mostre o resultado no terminal."""
+Mostre o resultado no terminal.
+
+💡 Dicas de lógica:
+
+Você pode percorrer a palavra de trás pra frente com um loop, ou usar fatiamento de strings (texto[::-1]).
+
+Pense no retorno: a função deve devolver a palavra invertida, não imprimir dentro dela."""
+
+
+# palavra = input("Fale uma palavra para ser invertida: ")
+
+# def palavra_invertida(a):   
+#     return f"Palavra: {a[::-1]}"
+ 
+# print (palavra_invertida(palavra))
+
+"""Crie uma função chamada contar_repetidas(texto) que recebe uma string.
+
+A função deve contar quantas vezes cada letra aparece na palavra ou frase (ignorando maiúsculas/minúsculas).
+
+Retorne um dicionário com as letras e a quantidade de vezes que aparecem.
+
+No programa principal:
+
+Peça ao usuário para digitar uma palavra ou frase.
+
+Use a função para contar as letras.
+
+Mostre o resultado de forma legível no terminal."""
+
+texto = int("Digite uma palavra")
+contador = {}
+
+for letra in texto:
+    if letra in contador:
+        contador[letra] += 1
+    else:
+        contador[letra] = 1
+
+print(contador)
 
 
 
