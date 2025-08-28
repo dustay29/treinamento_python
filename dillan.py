@@ -542,17 +542,53 @@ Use a função para contar as letras.
 
 Mostre o resultado de forma legível no terminal."""
 
-texto = int("Digite uma palavra")
-contador = {}
+# texto = input("Digite uma palavra")
+# texto = texto.lower() 
+# contador = {}
 
-for letra in texto:
-    if letra in contador:
-        contador[letra] += 1
+# for letra in texto:
+#     if letra in contador:
+#         contador[letra] += 1
+#     else:
+#         contador[letra] = 1
+
+# print(contador)
+
+"""Enunciado
+Crie uma função chamada contar_palavras(texto) que recebe uma string.
+A função deve contar quantas vezes cada palavra aparece em uma frase (ignorando maiúsculas/minúsculas).
+Retorne um dicionário com as palavras e suas frequências."""
+
+# texto = input("Digite uma frase: ")
+
+# separadas = texto.split() 
+# inverso = separadas[::-1] #Invertendo as palavras
+
+# resultado = " ".join(inverso) # "roupa a roeu rato o"
+
+# print(resultado)
+
+"""Com função"""
+
+# def inverter_palavras(texto):
+#     separadas = texto.split()
+#     inverso = separadas[::-1]
+#     return " ".join(inverso)
+
+
+# # Programa principal
+# frase = input("Digite uma frase: ")
+# print(inverter_palavras(frase))
+
+def eh_palindromo(texto):
+    inverso = texto[::-1]
+    if texto == inverso:
+        print ("É polidromo")
     else:
-        contador[letra] = 1
+        print ("Não é polidromo")
 
-print(contador)
-
+palavra = input("Digite uma frase: ")
+eh_palindromo(palavra)
 
 
 
